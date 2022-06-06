@@ -14,33 +14,27 @@ body{
     padding-top: 2rem;
     justify-content: center;
     height: 7vh;
-    background-color: aqua;
-    color: black;
+    background-color: rgb(131, 127, 127);
+    color: rgb(88, 3, 3);
     font-weight: 600;
     margin-top: 1rem;
     border-radius: 100px;
-    /* padding: 10rem; */
+    border: 1px solid red;
 }
 
 /* .site-init h1{
     
 } */
 
-.login{
-
-
-    display: flex;
-    flex-direction: column;
-    margin-top: 4rem;
-    margin-bottom: 2rem;
-    /* text-align: center; */
-   
-    /* display: flex; 
-    flex-direction: row;
-    text-align: center;
-    margin:1rem;
+.site-init nav a{
     
-    color: black; */
+    display: flex;
+    flex-direction: row-reverse;
+    width: fit-content;
+    margin-top: 2rem;
+    margin-left: 47%;
+    margin-bottom: 2rem;
+    
 }
 
 main{
@@ -50,30 +44,39 @@ main{
     height: 25vh;
 }
 
-label{
-margin-bottom: 1rem;
-font-weight: 600;
-}
-
 .login-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
+    margin-top: 4rem;
+    height: 30vh;
+    background-color: rgb(131, 127, 127);
+    color: rgb(88, 3, 3);
+    border: 1px solid red;
+    border-radius: 25px;
+}
+.login-container label{
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .login-container input{
     width:15rem;
     padding:5px;
     margin-bottom: .75rem;
+    margin-left: 1rem;
+    margin-right:1rem;
 }
 
 .login-container button{
     padding: 0.5rem;
+    margin-top: 2rem;
     background-color: black;
     width: 5rem;
     color: white;
+    border: 1px solid red;
     border-radius: 20px;
     cursor: pointer;
 }
@@ -84,42 +87,65 @@ font-weight: 600;
     padding-top: 2rem;
     justify-content: center;
     height: 7vh;
-    background-color: aqua;
-    color: black;
+    background-color: rgb(131, 127, 127);
+    color: rgb(88, 3, 3);
     font-weight: 600;
     margin-top: 1rem;
     border-radius: 100px;
-    /* display: flex;
-    justify-content: center;
+    border: 1px solid red;
+    
+    /* justify-content: center;
     margin-top: 3rem;
-    height: 6vh; 
-    border: 1px dotted green; */
+    height: 6vh;  */
+
 }
 
- .registration a{
+/* .registration a{ */
+.site-register nav a{ 
     display: flex;
-    justify-content: center;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-    /* flex-direction: row; */
+    flex-direction: row-reverse;
+    width: fit-content;
+    margin-top: 2rem;
+    margin-left: 50%;
+    /* margin-bottom: 3rem; */
+    /* border:1px solid orangered; */
+     /* justify-content: center; */
 }
 .form-container{
     display: flex;
+    background-color: rgb(131, 127, 127);
+    margin-left: 8%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid red;
+    margin-top:15rem;
+    height:35vh;
+    border-radius: 25px;
+}
+.form-container h2{
+    margin-bottom: 3rem;
+    color: rgb(88, 3, 3);
 }
 .form-container input{
     width:15rem;
     padding:5px;
-    margin-bottom: .75rem;
+    margin-bottom: .5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
 }
-.login-container button{
-    padding: 0.5rem;
+.form-container button{
+    
     background-color: black;
     width: 5rem;
+    margin-top: 1rem;
     color: white;
     border-radius: 20px;
+    border:1px solid red;
+    padding: 0.5rem;
     cursor: pointer;
 }
 /* this is for register */
+.input-error{
+    border:1px solid rgb(233, 78, 7);
+}
