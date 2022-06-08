@@ -86,13 +86,13 @@ main{
     display: flex;
     padding-top: 2rem;
     justify-content: center;
-    height: 7vh;
+    height: 12vh;
     background-color: rgb(131, 127, 127);
     color: rgb(88, 3, 3);
     font-weight: 600;
     margin-top: 1rem;
     border-radius: 100px;
-    border: 1px solid red;
+    border: 2px solid rgb(88, 3, 3);
     
     /* justify-content: center;
     margin-top: 3rem;
@@ -102,12 +102,12 @@ main{
 
 /* .registration a{ */
 .site-register nav a{ 
-    display: flex;
     flex-direction: row-reverse;
     width: fit-content;
     margin-top: 2rem;
     margin-left: 50%;
-    /* margin-bottom: 3rem; */
+    margin-bottom: 5rem;
+    text-decoration: none;
     /* border:1px solid orangered; */
      /* justify-content: center; */
 }
@@ -118,13 +118,17 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
-    margin-top:15rem;
-    height:35vh;
+    
+    margin-top:35rem;
+    height:75vh;
+    width:40vw;
     border-radius: 25px;
+    padding: 2rem;
+    border: 2px solid rgb(88, 3, 3);
 }
 .form-container h2{
-    margin-bottom: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
     color: rgb(88, 3, 3);
 }
 .form-container input{
@@ -141,11 +145,11 @@ main{
     margin-top: 1rem;
     color: white;
     border-radius: 20px;
-    border:1px solid red;
+    border:1px solid rgb(88, 3, 3) ;
     padding: 0.5rem;
     cursor: pointer;
 }
 /* this is for register */
 .input-error{
-    border:1px solid rgb(233, 78, 7);
+    background-color:  rgb(242, 120, 63);
 }
