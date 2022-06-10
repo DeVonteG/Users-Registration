@@ -34,45 +34,68 @@ function isValid(user){
     if(user.email.length==0 || user.email==""){
         valid=false;
         $("#txtEmail").addClass("input-error");
-        alert("Please add an email");
+        // alert("Please add an email");
     }
 
     if(user.password=="" || user.password.length <=6){
         valid=false;
         $("#txtPassword").addClass("input-error");
-        alert("Password must be at least 7 characters");
+        // alert("Password must be at least 7 characters");
     }
     if(user.firstName.length==0){
         valid=false;
         $("#txtFirstName").addClass("input-error");
-        alert("Enter First Name");
+        // alert("Enter First Name");
     }
     if( user.lastName.length==0 || user.lastName==""){
         valid=false;
         $("#txtLastName").addClass("input-error");
-        alert("Enter Last Name");
+        // alert("Enter Last Name");
     }
     if(user.userAge==""){
         valid=false;
         $("#txtAge").addClass("input-error");
-        alert("Please Enter Age");
+        // alert("Please Enter Age");
     }
     if(user.userPhone==""){ // user.userPhone.length >=12){
         valid=false;
         $("#txtPhone").addClass("input-error");
-        alert("Please enter Valid Phone Number");
+        // alert("Please enter Valid Phone Number");
     }
     // if(user.paymentMethod==0){
     //     valid=false;
     //     $("#userPayment").addClass("input-error");
     //     alert("Please select a payment type");
     // }
-    return valid;
-    
-    
-    
+    return valid;    
 } 
 
+
+// validate password
+function validatePass(){
+    console.log("validating pass");
+    // get value of the input
+    let txtPass = $("#txtPassword");
+
+    let password = txtPass.val();
+        if(password.length<6){ // is the password less than 6 characters
+            txtPass.css("background","#ff9898"); //jQuery changes the css
+            displayError("The Password is too short");
+            
+        }else{
+            txtPass.css("background","#64cc66"); //jQuery changes the css
+            hideError();
+        }
+
+    // is the password less than 6 characters?
+}
+
+function displayError(msg){
+    $("#alertError").removeClass("hide").text(msg);
+}
+function hideError(){
+    $("#alertError").addClass("hide");
+}
 
 // register function
 function register(){
@@ -95,25 +118,33 @@ function register(){
     if(isValid(newUser)==true){
         // console.log(newUser);
         saveUser(newUser); //this function is in the storeManager
+        hideError();
         // clear the inputs
         $("input").val("");
         $("select").val("");
+    }else{
+        displayError("Please complete all the fields");
     }
     
     
 }
+
+// function login(){
+//     let userName=$("#txtEmail").val();
+
+// }
 
 function init(){
     // // console.log("Login");
     // $("#btnLogin").click(login);
     console.log("Register");
     $("#btnRegister").click(register);
-    $("#txtLastName").keypress(function(e){
+    $("#txtPassword").keypress(function(e){
         if(e.key=="Enter"){
             register();
         }
-        console.log(e.key);
     });
+    $("#txtPassword").keyup(validatePass); //it is executed everytime that the key is up
 
 }
 

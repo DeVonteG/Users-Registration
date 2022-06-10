@@ -13,13 +13,13 @@ body{
     display: flex;
     padding-top: 2rem;
     justify-content: center;
-    height: 7vh;
+    height: 11vh;
     background-color: rgb(131, 127, 127);
     color: rgb(88, 3, 3);
     font-weight: 600;
     margin-top: 1rem;
     border-radius: 100px;
-    border: 1px solid red;
+    border: 2px solid rgb(88, 3, 3);
 }
 
 /* .site-init h1{
@@ -53,7 +53,7 @@ main{
     height: 30vh;
     background-color: rgb(131, 127, 127);
     color: rgb(88, 3, 3);
-    border: 1px solid red;
+    border: 2px solid rgb(88, 3, 3);
     border-radius: 25px;
 }
 .login-container label{
@@ -76,7 +76,7 @@ main{
     background-color: black;
     width: 5rem;
     color: white;
-    border: 1px solid red;
+    border: 2px solid rgb(88, 3, 3);
     border-radius: 20px;
     cursor: pointer;
 }
@@ -152,4 +152,12 @@ main{
 /* this is for register */
 .input-error{
     background-color:  rgb(242, 120, 63);
+}
+.alert-error{
+    border: 1px solid rgb(124, 1, 1);
+    color: rgb(126, 0, 0);
+    background-color: rgb(255, 125, 144);
+}
+.hide{
+    display: none;
 }
